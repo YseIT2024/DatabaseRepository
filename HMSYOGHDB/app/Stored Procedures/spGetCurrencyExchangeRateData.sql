@@ -7,6 +7,7 @@ AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
+	-- Comment to check the VersionControl
 	SET NOCOUNT ON; 
 
  
