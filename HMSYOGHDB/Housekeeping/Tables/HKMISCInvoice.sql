@@ -1,0 +1,26 @@
+﻿CREATE TABLE [Housekeeping].[HKMISCInvoice] (
+    [InvoiceNo]            INT            IDENTITY (1, 1) NOT NULL,
+    [FolioNumber]          INT            NOT NULL,
+    [GuestID]              INT            NULL,
+    [RoomNo]               INT            NULL,
+    [InvoiceDate]          DATETIME       NOT NULL,
+    [TotalAmountBeforeTax] DECIMAL (6, 2) NULL,
+    [Discount]             DECIMAL (6, 2) NOT NULL,
+    [ServiceCharge]        DECIMAL (6, 2) NOT NULL,
+    [TaxAmount]            DECIMAL (6, 2) NOT NULL,
+    [TotalAmountAfterTax]  DECIMAL (6, 2) NOT NULL,
+    [CashPaid]             DECIMAL (6, 2) NOT NULL,
+    [PINPaid]              DECIMAL (6, 2) NOT NULL,
+    [ReturnAmount]         DECIMAL (6, 2) NOT NULL,
+    [InvoiceStatus]        INT            NOT NULL,
+    [PrintStatus]          INT            NOT NULL,
+    [Remarks]              VARCHAR (250)  NULL,
+    [CreatedBy]            INT            NOT NULL,
+    [Createdon]            DATETIME       NOT NULL,
+    [ModifiedOn]           DATETIME       NULL,
+    [ModifiedBy]           INT            NULL,
+    [ItemCount]            INT            NOT NULL,
+    [IsActive]             BIT            NOT NULL,
+    CONSTRAINT [PK_HKMISCInvoice] PRIMARY KEY CLUSTERED ([InvoiceNo] ASC) WITH (FILLFACTOR = 90)
+);
+

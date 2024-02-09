@@ -1,0 +1,6 @@
+﻿CREATE TABLE [Products].[Floor] (
+    [FloorID] INT          IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [Floor]   VARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_Floor] PRIMARY KEY CLUSTERED ([FloorID] ASC) WITH (FILLFACTOR = 90)
+);
+

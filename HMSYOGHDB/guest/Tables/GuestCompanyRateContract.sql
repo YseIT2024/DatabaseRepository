@@ -1,0 +1,28 @@
+﻿CREATE TABLE [guest].[GuestCompanyRateContract] (
+    [RateContractID]       INT             IDENTITY (1, 1) NOT NULL,
+    [GuestCompanyID]       INT             NOT NULL,
+    [ItemID]               INT             NOT NULL,
+    [ContractFrom]         DATETIME        NOT NULL,
+    [ContractTo]           DATETIME        NOT NULL,
+    [NetRate]              DECIMAL (18, 6) NULL,
+    [SellRate]             DECIMAL (18, 6) NULL,
+    [DiscountPercent]      DECIMAL (12, 2) NOT NULL,
+    [DiscountAmt]          DECIMAL (18, 6) NULL,
+    [IsActive]             BIT             NOT NULL,
+    [CreatedBy]            VARCHAR (50)    NOT NULL,
+    [CreatedOn]            DATETIME        NOT NULL,
+    [Para1]                VARCHAR (250)   NULL,
+    [Para2]                VARCHAR (250)   NULL,
+    [Para3]                DATETIME        NULL,
+    [Para4]                DATETIME        NULL,
+    [Para5]                INT             NULL,
+    [Para6]                INT             NULL,
+    [AddPax]               DECIMAL (18, 4) NULL,
+    [AddChild]             DECIMAL (18, 4) NULL,
+    [AddChildSr]           DECIMAL (18, 4) NULL,
+    [ModifiedBy]           INT             NULL,
+    [ModifiedOn]           DATETIME        NULL,
+    [CommissionPercentage] DECIMAL (18, 4) NULL,
+    CONSTRAINT [PK_GuestCompanyRateContract] PRIMARY KEY CLUSTERED ([RateContractID] ASC) WITH (FILLFACTOR = 90)
+);
+

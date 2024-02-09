@@ -1,0 +1,26 @@
+﻿CREATE TABLE [account].[VoidTransaction] (
+    [VTransactionID]      INT             IDENTITY (1, 1) NOT NULL,
+    [TransactionID]       INT             NOT NULL,
+    [TransactionTypeID]   INT             NOT NULL,
+    [AccountTypeID]       INT             NOT NULL,
+    [LocationID]          INT             NOT NULL,
+    [ReservationID]       INT             NULL,
+    [ContactID]           INT             NOT NULL,
+    [Amount]              DECIMAL (18, 6) NOT NULL,
+    [CurrencyID]          INT             NOT NULL,
+    [ActualAmount]        DECIMAL (18, 6) NOT NULL,
+    [ActualCurrencyID]    INT             NOT NULL,
+    [ExchangeRate]        DECIMAL (18, 6) NOT NULL,
+    [Remarks]             VARCHAR (MAX)   NOT NULL,
+    [TransactionModeID]   INT             NOT NULL,
+    [AccountingDateID]    INT             NOT NULL,
+    [TransactionDateTime] DATETIME        NOT NULL,
+    [DrawerID]            INT             NOT NULL,
+    [UserShiftID]         INT             NULL,
+    [UserID]              INT             NOT NULL,
+    [VoidBy]              INT             NOT NULL,
+    [Reason]              VARCHAR (MAX)   NOT NULL,
+    [DateTime]            DATETIME        CONSTRAINT [DF_VoidTransaction_DateTime] DEFAULT (getdate()) NOT NULL,
+    CONSTRAINT [PK_VoidTransaction] PRIMARY KEY CLUSTERED ([VTransactionID] ASC) WITH (FILLFACTOR = 90)
+);
+

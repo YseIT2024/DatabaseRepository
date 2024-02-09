@@ -1,0 +1,27 @@
+﻿CREATE TABLE [Housekeeping].[HKMissingAndDamages] (
+    [TransId]             INT             IDENTITY (1, 1) NOT NULL,
+    [TransactionType]     INT             NULL,
+    [TransDate]           DATETIME        NULL,
+    [ItemId]              INT             NULL,
+    [ItemDescription]     NVARCHAR (100)  NULL,
+    [Quantity]            INT             NULL,
+    [LocationType]        INT             NULL,
+    [LocationId]          INT             NULL,
+    [LocationDescription] NVARCHAR (100)  NULL,
+    [ActionTaken]         INT             NULL,
+    [Status]              INT             NULL,
+    [InformedBy]          NVARCHAR (50)   NULL,
+    [InformedDate]        DATETIME        NULL,
+    [InformedTo]          NVARCHAR (50)   NULL,
+    [ReplacementDate]     DATETIME        NULL,
+    [AmountCharged]       DECIMAL (18, 2) NULL,
+    [ReceiptNo]           INT             NULL,
+    [Narration]           NVARCHAR (250)  NULL,
+    [CreatedOn]           DATETIME        NULL,
+    [CreatedBy]           INT             NULL,
+    [ModifiedOn]          DATETIME        NULL,
+    [ModifiedBy]          INT             NULL,
+    [PersonResponsible]   NVARCHAR (250)  NULL,
+    CONSTRAINT [PK_HKMissingAndDamages] PRIMARY KEY CLUSTERED ([TransId] ASC) WITH (FILLFACTOR = 90)
+);
+

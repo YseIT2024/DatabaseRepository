@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [fund]
+    AUTHORIZATION [dbo];
+

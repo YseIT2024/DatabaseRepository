@@ -1,0 +1,6 @@
+﻿CREATE TABLE [todo].[Type] (
+    [ToDoTypeID] INT          IDENTITY (1, 1) NOT NULL,
+    [ToDoType]   VARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_Type] PRIMARY KEY CLUSTERED ([ToDoTypeID] ASC) WITH (FILLFACTOR = 90)
+);
+

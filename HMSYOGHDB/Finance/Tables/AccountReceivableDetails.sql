@@ -1,0 +1,25 @@
+﻿CREATE TABLE [Finance].[AccountReceivableDetails] (
+    [AccountReceivableDescriptionId] INT             IDENTITY (1, 1) NOT NULL,
+    [Description]                    VARCHAR (200)   NULL,
+    [Quantity_Hrs]                   DECIMAL (18, 2) NULL,
+    [Rate]                           DECIMAL (18, 2) NULL,
+    [Amount]                         DECIMAL (18, 2) NULL,
+    [SubTotal]                       DECIMAL (18, 2) NULL,
+    [TaxRate]                        DECIMAL (18, 2) NULL,
+    [SalesTax]                       DECIMAL (18, 2) NULL,
+    [Others]                         DECIMAL (18, 2) NULL,
+    [Total]                          DECIMAL (18, 2) NULL,
+    [AccountReceivableId]            INT             NULL,
+    [AccountTypeId]                  INT             NULL,
+    [CreatedOn]                      DATETIME        NULL,
+    [IsActive]                       BIT             NULL,
+    [MasterDescriptionId]            INT             NULL,
+    [CGSTRate]                       DECIMAL (18, 2) NULL,
+    [CGSTAmount]                     DECIMAL (18, 2) NULL,
+    [SGSTRate]                       DECIMAL (18, 2) NULL,
+    [SGSTAmount]                     DECIMAL (18, 2) NULL,
+    [IGSTRate]                       DECIMAL (18, 2) NULL,
+    [IGSTAmount]                     DECIMAL (18, 2) NULL,
+    [TotalAmount]                    DECIMAL (18, 2) NULL
+);
+

@@ -1,0 +1,26 @@
+﻿CREATE TABLE [Housekeeping].[PickupAndDrop] (
+    [pickupdropid]      INT             IDENTITY (1, 1) NOT NULL,
+    [Type]              VARCHAR (100)   NULL,
+    [PickupdropDate]    DATETIME        NULL,
+    [PickupDropAddress] VARCHAR (300)   NULL,
+    [Transport]         INT             NULL,
+    [VehicleType]       INT             NULL,
+    [ReservationID]     INT             NULL,
+    [CreatedBy]         INT             NULL,
+    [CreatedOn]         DATETIME        NULL,
+    [ModifiedBy]        INT             NULL,
+    [ModifiedOn]        DATETIME        NULL,
+    [LocationId]        INT             NULL,
+    [TobeCharge]        BIT             NULL,
+    [Staus]             VARCHAR (50)    NULL,
+    [complementary]     BIT             NULL,
+    [Amount]            DECIMAL (18, 3) NULL,
+    [FlightDetails]     VARCHAR (200)   NULL,
+    [LineTotalBT]       DECIMAL (18, 3) NULL,
+    [LineTotalTax]      DECIMAL (18, 3) NULL,
+    [PickUpDropTime]    TIME (7)        NULL,
+    [CashPaid]          DECIMAL (18, 3) NULL,
+    CONSTRAINT [PK__PickupAn__35C6A174A1384D5A] PRIMARY KEY CLUSTERED ([pickupdropid] ASC) WITH (FILLFACTOR = 90),
+    CONSTRAINT [FK__PickupAnd__Reser__5BC37289] FOREIGN KEY ([ReservationID]) REFERENCES [reservation].[Reservation] ([ReservationID])
+);
+

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [Products].[UOMClass] (
+    [UOMClassID]  INT          IDENTITY (1, 1) NOT NULL,
+    [Description] VARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_UOMClass] PRIMARY KEY CLUSTERED ([UOMClassID] ASC) WITH (FILLFACTOR = 90)
+);
+

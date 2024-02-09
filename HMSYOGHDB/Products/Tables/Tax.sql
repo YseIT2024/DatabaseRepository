@@ -1,0 +1,6 @@
+﻿CREATE TABLE [Products].[Tax] (
+    [ItemID] INT NOT NULL,
+    [TaxID]  INT NOT NULL,
+    CONSTRAINT [PK_Tax] PRIMARY KEY CLUSTERED ([ItemID] ASC, [TaxID] ASC) WITH (FILLFACTOR = 90)
+);
+

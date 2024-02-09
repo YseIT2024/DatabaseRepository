@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Lock]
+    AUTHORIZATION [dbo];
+

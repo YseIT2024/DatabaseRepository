@@ -1,0 +1,28 @@
+﻿CREATE TABLE [Housekeeping].[GuestTickets] (
+    [TicketId]        INT           IDENTITY (1, 1) NOT NULL,
+    [TicketTypeId]    INT           NOT NULL,
+    [GuestTypeId]     INT           NOT NULL,
+    [RoomId]          INT           NULL,
+    [GuestId]         INT           NOT NULL,
+    [GuestName]       VARCHAR (250) NOT NULL,
+    [ReservationNo]   INT           NULL,
+    [RequestFor]      INT           NOT NULL,
+    [Subject]         VARCHAR (50)  NOT NULL,
+    [Description]     VARCHAR (500) NOT NULL,
+    [RequestDate]     DATETIME      NOT NULL,
+    [RequestTime]     DATETIME      NOT NULL,
+    [Assignee]        INT           NULL,
+    [Status]          INT           NOT NULL,
+    [ActionBy]        INT           NULL,
+    [ActionDate]      DATETIME      NULL,
+    [ActionTime]      DATETIME      NULL,
+    [ActionNarration] VARCHAR (500) NULL,
+    [CreatedBy]       INT           NOT NULL,
+    [CreatedOn]       DATETIME      NOT NULL,
+    [IsActive]        BIT           NOT NULL,
+    [ModifiedBy]      INT           NULL,
+    [ModifiedOn]      DATETIME      NULL,
+    [LocationId]      INT           NULL,
+    CONSTRAINT [PK_GuestTickets] PRIMARY KEY CLUSTERED ([TicketId] ASC) WITH (FILLFACTOR = 90)
+);
+

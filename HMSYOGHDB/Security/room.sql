@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [room]
+    AUTHORIZATION [dbo];
+

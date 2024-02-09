@@ -1,0 +1,27 @@
+﻿CREATE TABLE [Products].[RoomPriceTempTable] (
+    [PriceID]         INT             NOT NULL,
+    [ItemID]          INT             NOT NULL,
+    [PriceTypeID]     INT             NOT NULL,
+    [LocationID]      INT             NOT NULL,
+    [FromDate]        DATE            NOT NULL,
+    [CurrencyID]      INT             NOT NULL,
+    [BasePrice]       DECIMAL (18, 4) NOT NULL,
+    [BasePriceSingle] DECIMAL (18, 4) NULL,
+    [Commission]      DECIMAL (12, 2) NULL,
+    [Discount]        DECIMAL (12, 2) NULL,
+    [AddPax]          DECIMAL (12, 4) NULL,
+    [AddChild]        DECIMAL (12, 4) NULL,
+    [AddChildSr]      DECIMAL (12, 4) NULL,
+    [SalePrice]       DECIMAL (18, 4) NOT NULL,
+    [SalePriceSingle] DECIMAL (18, 4) NULL,
+    [Remarks]         VARCHAR (200)   NULL,
+    [IsOnDemand]      BIT             NULL,
+    [IsWeekEnd]       BIT             NULL,
+    [Priority]        INT             NULL,
+    [CreatedBy]       INT             NULL,
+    [CreateDate]      DATETIME        NULL,
+    [DayPriceID]      INT             NULL,
+    [ID]              INT             IDENTITY (1, 1) NOT NULL,
+    CONSTRAINT [PK_RoomPriceTempTable] PRIMARY KEY CLUSTERED ([ID] ASC) WITH (FILLFACTOR = 90)
+);
+
